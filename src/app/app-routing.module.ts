@@ -4,6 +4,7 @@ import { HomeComponent } from './general/home/home.component';
 import { Pagina404Component } from './general/pagina404/pagina404.component';
 import { ProductoComponent } from './general/producto/producto.component';
 import { RegistroComponent } from './general/registro/registro.component';
+import { LoginComponent } from './general/login/login.component';
 
 
 // referencias a los componentes 
@@ -12,6 +13,7 @@ const app_routes: Routes = [
     { path: '', component: HomeComponent }, //la main
     { path: 'producto', component: ProductoComponent },
     { path: 'registro', component: RegistroComponent},
+    { path: 'login', component: LoginComponent},
     { path:'**', component: Pagina404Component}, //default
 
 ];
