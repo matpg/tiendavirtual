@@ -15,6 +15,7 @@ import { LoginComponent } from './general/login/login.component';
 import { RegistroComponent } from './general/registro/registro.component';
 import { HomeComponent } from './general/home/home.component';
 import { Pagina404Component } from './general/pagina404/pagina404.component';
+import { PruebasComponent } from './general/pruebas/pruebas.component';
 
 @NgModule({
     declarations: [
@@ -27,7 +28,8 @@ import { Pagina404Component } from './general/pagina404/pagina404.component';
         LoginComponent,
         RegistroComponent,
         HomeComponent,
-        Pagina404Component
+        Pagina404Component,
+        PruebasComponent
     ],
     imports: [
         BrowserModule,
