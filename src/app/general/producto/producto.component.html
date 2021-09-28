@@ -1,33 +1,50 @@
-<div class="row">
-    <div class="col-sm-3">
-        <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Producto</h5>
-                <p class="card-text">Taco 1</p>
-                <a href="#" class="btn btn-primary">Comprar</a>
+<div class="container">
+    <form class="d-flex">
+        <input [(ngModel)]="term" name="term" class="searchTerm" placeholder="¿Que Funko buscas?"
+            class="form-control me-2" type="search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+    </form>
+    <br>
+    <div class="row">
+        <div class="col-sm-2" *ngFor="let poke of pkS.pokedex['pokemons'] | filter:term">
+            <div class="card">
+                <div class="card-body">
+                    <img src="assets/img/{{poke.name}}.jpg" class="img-fluid card-img-top" alt="img/{{poke.name}}">
+                    <h5 class="card-title">Funko {{poke.name}}</h5>
+                    <p class="card-text">{{poke.name}}</p>
+                    <p class="card-text">{{poke.type}}</p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-sm-3">
-        <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Producto</h5>
-                <p class="card-text">Taco 2</p>
-                <a href="#" class="btn btn-primary">Comprar</a>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class=" carousel-item active">
+                <img src="assets/img/Pack.jpg" class="img-fluid d-block" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/Raichu.jpg" class="img-fluid d-block" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/Ratata.jpg" class="img-fluid d-block" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-sm-3">
-        <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Producto</h5>
-                <p class="card-text">Taco 3</p>
-                <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        <h5>Proximamente!</h5>
     </div>
 
 </div>

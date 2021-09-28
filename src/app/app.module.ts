@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-//rutas
+//Rutas
 import { AppRoutingModule } from './app-routing.module';
 
 //Componentes
@@ -17,6 +17,10 @@ import { HomeComponent } from './general/home/home.component';
 import { Pagina404Component } from './general/pagina404/pagina404.component';
 import { PruebasComponent } from './general/pruebas/pruebas.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+//Busqueda
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
     declarations: [
@@ -36,7 +40,11 @@ import { FormsModule } from '@angular/forms';
         BrowserModule,
         AppRoutingModule,
         //Siempre se debe importar para forms
-        FormsModule
+        FormsModule,
+        //para json
+        HttpClientModule,
+        //para la busqueda,
+        Ng2SearchPipeModule
     ],
     providers: [],
     bootstrap: [AppComponent]

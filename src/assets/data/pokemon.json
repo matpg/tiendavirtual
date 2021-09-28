@@ -1,0 +1,44 @@
+{
+    "pokemons": [
+        {
+            "id": 1,
+            "name": "Bulbasaur",
+            "type": "Grass",
+            "HP": 80,
+            "Attack": 82,
+            "Defense": 83
+        },
+        {
+            "id": 2,
+            "name": "Charizard",
+            "type": "Fire",
+            "HP": 78,
+            "Attack": 84,
+            "Defense": 83
+        },
+        {
+            "id": 9,
+            "name": "Jolteon",
+            "type": "Electric",
+            "HP": 65,
+            "Attack": 65,
+            "Defense": 60
+        },
+        {
+            "id": 12,
+            "name": "Caterpie",
+            "type": "Bug",
+            "HP": 45,
+            "Attack": 30,
+            "Defense": 35
+        },
+        {
+            "id": 95,
+            "name": "Psyduck",
+            "type": "Water",
+            "HP": 50,
+            "Attack": 52,
+            "Defense": 48
+        }
+    ]
+}
