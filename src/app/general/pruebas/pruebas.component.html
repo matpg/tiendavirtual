@@ -33,3 +33,30 @@
 
 <p *ngIf="eliminado === 'Lunes'">{{eliminado}} Este dia es el elegido</p>
 
+<!--
+<form (ngSubmit) = 'insertar($event)'></form>
+<button type="submit" class="btn btn-primary">Ingresar</button>
+
+-->
+<form (ngSubmit) = 'insertar2()'>
+    <div class="mb-3">
+        <h2>Log in</h2>
+        <br>
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input [(ngModel)]="email" name="email" type="email" class="form-control" aria-describedby="emailHelp" #emailInput>
+        <div class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+        <label for="inputPassword5" class="form-label">Password</label>
+        <input [(ngModel)]="password" name="password" type="password" class="form-control" aria-describedby="passwordHelpBlock" #passInput>
+        <div class="form-text">
+            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces,
+            special characters, or emoji.
+        </div>
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" #checkInput>
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

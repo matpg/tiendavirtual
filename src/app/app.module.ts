@@ -16,6 +16,7 @@ import { RegistroComponent } from './general/registro/registro.component';
 import { HomeComponent } from './general/home/home.component';
 import { Pagina404Component } from './general/pagina404/pagina404.component';
 import { PruebasComponent } from './general/pruebas/pruebas.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -33,7 +34,9 @@ import { PruebasComponent } from './general/pruebas/pruebas.component';
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+        //Siempre se debe importar para forms
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

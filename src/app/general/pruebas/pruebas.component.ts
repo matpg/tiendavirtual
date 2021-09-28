@@ -17,6 +17,10 @@ export class PruebasComponent implements OnInit {
   eliminado: string | null | undefined = null;
   post: any = null;
 
+  //variables del formulario
+  email: string | null = null;
+  password: string | null = null;
+
   constructor() {
     console.log("Constructor Pruebas");
   }
@@ -54,6 +58,12 @@ export class PruebasComponent implements OnInit {
     this.semana.push(nuevodia);
   }
 
+  insertar(event: any): void {
+    console.log(event);
+  }
 
+  insertar2() {
+    console.log(this.email, this.password);
+  }
 
 }

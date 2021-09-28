@@ -1,26 +1,17 @@
-<div class="container">
-    <div class="row justify-content-md-center">
-        <div class="col-4">
-            <img src="img/eso.jpg" class="mx-auto d-block" height="130px">
+<div class="container-fluid contenedor-login">
 
-            <div class="form-control">
-                <h3>Login</h3>
-                <div class="mb-3">
-                    <label for="correo" class="form-label">Correo</label>
-                    <input type="text" class="form-control" id="correo" placeholder="name@example.com">
-                    <div id="correoMsg" class="form-text"></div>
+    <form (submit)="iniciarSesion()" class="form-signin">
 
-                </div>
+        <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesión</h1>
+        <label for="email" class="sr-only">Correo Electronico</label>
+        <input [(ngModel)]="email" type="email" id="email" name="email" class="form-control" placeholder="Correo electronico" autofocus="" email #prmEmail="ngModel">
+        <!--<p *ngIf="prmEmail.errors?.email">Primary Email not valid.</p>-->
+        <p style="color:red;">{{mensaje_email}}</p>
+        <label for="password" class="sr-only">Contraseña</label>
+        <input [(ngModel)]="password" type="password" id="password" name="password" class="form-control" placeholder="Contraseña">
+        <p style="color:red;">{{mensaje_password}}</p>
+        <!--<button class="btn btn-lg btn-primary btn-block " routerLinkActive="active" routerLink="/inicio" type="submit">Iniciar</button>-->
+        <button class="btn btn-lg btn-primary btn-block " type="submit">Iniciar</button>
+    </form>
 
-                <div class="mb-3">
-                    <label for="contrasena" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="contrasena" placeholder="Ingrese contraseña">
-                    <div id="contrasenaMsg" class="form-text"></div>
-                </div>
-
-                <a href="tipoProblema.html" class="btn btn-primary" id="">Iniciar sesión</a>
-                <a href="registro.html">Registrate</a>
-            </div>
-        </div>
-    </div>
 </div>

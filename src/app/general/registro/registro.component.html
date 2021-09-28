@@ -1,30 +1,30 @@
-<div class="form-control" id="formularioNotas">
-    <h3>Registrate</h3>
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Nombre :</span>
-        <input type="text" class="nota form-control" id="nomb">
-    </div>
-    <h5 id="errorNombre"></h5>
+<div class="container-fluid contenedor-login">
 
+    <form class="form-signin" (submit)="insertar()">
 
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Apellido Paterno:</span>
-        <input type="text" class="nota form-control" id="apeP">
-    </div>
-    <h5 id="errorApeP"></h5>
+        <h1 class="h3 mb-3 font-weight-normal">Registrese</h1>
+        <label for="inputNombre" class="sr-only">Nombre</label>
+        <input [(ngModel)]="nombre" name="nombre" type="text" id="inputNombre" class="form-control"
+            placeholder="Nombre">
+        <p style="color:red;">{{mensaje_nombre}}</p>
+        <div class="checkbox mb-3">
+            <label for="inputEmail" class="sr-only">Correo Electronico</label>
+            <input [(ngModel)]="email" name="email" type="email" id="inputEmail" class="form-control"
+                placeholder="Email address">
+            <p style="color:red;">{{mensaje_email}}</p>
+            <label for="inputPassword" class="sr-only">Contraseña</label>
+            <input [(ngModel)]="password" name="password" type="password" id="inputPassword" class="form-control"
+                placeholder="Contraseña">
+            <p style="color:red;">{{mensaje_password}}</p>
+            <div class="checkbox mb-3">
+                <label for="inputRepetidaPassword" class="sr-only">Repita la Contraseña</label>
+                <input [(ngModel)]="inputRepetidaPassword" type="password" name="inputRepetidaPassword"
+                    id="inputRepetidaPassword" class="form-control" placeholder="Repita Contraseña">
+                <p style="color:red;">{{mensaje_password_repetida}}</p>
+            </div>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block " type="submit">Registrarse</button>
 
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Apellido Materno:</span>
-        <input type="text" class="nota form-control" id="apeM">
-    </div>
-    <h5 id="errorApeM"></h5>
+    </form>
 
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">Correo:</span>
-        <input type="correo" class="nota form-control" id="correo">
-    </div>
-
-    <h5 id="errorCorreo"></h5>
-    <br>
-    <a href="login.html" class="btn btn-primary" id="registrarUsuario">Registrar</a>
 </div>

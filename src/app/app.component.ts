@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductoService } from './services/productos.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tiendavirtual';
+  constructor(public pS: ProductoService) {
+  }
 }
