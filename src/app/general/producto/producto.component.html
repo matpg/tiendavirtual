@@ -12,12 +12,42 @@
                     <img src="assets/img/{{poke.name}}.jpg" class="img-fluid card-img-top" alt="img/{{poke.name}}">
                     <h5 class="card-title">Funko {{poke.name}}</h5>
                     <p class="card-text">{{poke.name}}</p>
-                    <p class="card-text">{{poke.type}}</p>
-                    <a href="#" class="btn btn-primary">Comprar</a>
+                    <p class="card-text">Season {{poke.type}}</p>
+                    <p class="card-text">${{poke.Price}}</p>
+                    <a (click)="anadirAlCarro(poke)" class="btn btn-primary">Comprar</a>
                 </div>
             </div>
         </div>
     </div>
+    <br>
+    <div class="row">
+        <h2>Carro de Compras:</h2>
+        <ul>
+
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Descripcion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="animate-repeat" *ngFor="let item of carroCompras">
+                        <th scope="row">Funko {{ item.name }}</th>
+                        <td>{{ item.Price }}</td>
+                        <td>{{'HP: '+ item.HP + ' Attack:' + item.Attack + ' Defense:' + item.Defense }}</td>
+                        <td><button class="btn btn-danger" (click)="eliminarDelCarro(item)">Eliminar Funko</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </ul>
+        <h3>Total: {{ mostrarTotal(carroCompras) }}</h3>
+    </div>
+
+    <br>
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class=" carousel-item active">

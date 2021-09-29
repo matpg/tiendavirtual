@@ -9,4 +9,5 @@ export interface Pokemon {
     HP?: number;
     Attack?: number;
     Defense?: number;
+    Price?: number;
 }
