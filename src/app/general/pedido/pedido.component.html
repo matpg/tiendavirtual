@@ -1,0 +1,57 @@
+<div class="container">
+    <form >
+        <div class="mb-3">
+            <h5>Direccion de Envío del Pedido</h5>
+            <label for="paisInput" class="form-label">Pais</label>
+            <input [(ngModel)]="pais" name="pais" placeholder="Pais" type="string" class="form-control" id="paisInput" aria-describedby="paisHelp">
+            <!--<div id="paisHelp" class="form-text">Nunca compartiremos esta info con nadie externo.</div>-->
+            <p style="color:red;">{{mensaje_pais}}</p>
+        </div>
+        <div class="mb-3">
+            <label for="calleInput" class="form-label">Calle</label>
+            <input [(ngModel)]="calle" name="calle" placeholder="Calle" type="string" class="form-control" id="calleInput" aria-describedby="calleHelp">
+            <p style="color:red;">{{mensaje_calle}}</p>
+        </div>
+        <div class="mb-3">
+            <label for="ciudadInput" class="form-label">Ciudad</label>
+            <input [(ngModel)]="ciudad" name="ciudad" placeholder="Ciudad" type="string" class="form-control" id="ciudadInput" aria-describedby="ciudadHelp">
+            <p style="color:red;">{{mensaje_ciudad}}</p>
+        </div>
+        <div class="mb-3">
+            <label for="regionInput" class="form-label">Región</label>
+            <input [(ngModel)]="region" name="region" placeholder="Región" type="string" class="form-control" id="regionInput" aria-describedby="regionHelp">
+            <p style="color:red;">{{mensaje_region}}</p>
+        </div>
+        <div class="mb-3">
+            <label for="codPostalInput" class="form-label">Codigo Postal</label>
+            <input [(ngModel)]="codPostal" name="codPostal" type="number" class="form-control" id="codPostalInput" aria-describedby="codPostalHelp">
+        </div>
+        <br>
+        <br>
+        <div class="mb-3">
+            <h5>Datos de Tarjeta de Crédito</h5>
+            <label for="tarjetaInput" class="form-label">Tipo de Tarjeta</label>
+            <input [(ngModel)]="tipoTarjeta" name="tipoTarjeta" placeholder="Tipo de Tarjeta" type="string" class="form-control" id="tarjetaInput" aria-describedby="tarjetaHelp">
+            <div id="tarjetaHelp" class="form-text">Nunca compartiremos esta info con nadie externo.</div>
+            <p style="color:red;">{{mensaje_tipoTarjeta}}</p>
+        </div>
+        <div class="mb-3">
+            <label for="nombreInput" class="form-label">Nombre del Cliente</label>
+            <input [(ngModel)]="nomCliente" name="nomCliente" placeholder="Nombre del Cliente" type="string" class="form-control" id="nomCliente" aria-describedby="nomClienteHelp">
+        </div>
+        <div class="mb-3">
+            <label for="numeroInput" class="form-label">Número de Tarjeta</label>
+            <input [(ngModel)]="numCliente" name="nomCliente" placeholder="Número de Tarjeta" type="number" class="form-control" id="numeroInput" aria-describedby="numeroHelp">
+        </div>
+        <div class="mb-3">
+            <label for="mesanoInput" class="form-label">Mes/Año de expiración.</label>
+            <input [(ngModel)]="mesAno" name="mesAno" placeholder="Mes/Año de expiración" type="string" class="form-control" id="mesanoInput" aria-describedby="mesanoHelp">
+        </div>
+        <div class="mb-3">
+            <label for="codSegInput" class="form-label">Codigo de Seguridad</label>
+            <input [(ngModel)]="codSeg" name="codSeg" placeholder="Codigo de Seguridad" type="number" class="form-control" id="codSegInput" aria-describedby="codSegHelp">
+            <p style="color:red;">{{mensaje_codSeg}}</p>
+        </div>
+        <button (click)="insertar()" type="submit" class="btn btn-success">Ir a Pagar</button>
+    </form>
+</div>

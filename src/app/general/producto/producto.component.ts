@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductoService } from '../../services/productos.service';
 import { CategoriaService } from '../../services/categoria.service';
 import { PokemonService } from '../../services/pokemon.service';
-import { ListaPokemon, Pokemon } from '../../interface/pokemon.interface';
+import { Pokemon } from '../../interface/pokemon.interface';
 
 @Component({
   selector: 'app-producto',
@@ -41,6 +41,10 @@ export class ProductoComponent implements OnInit {
       }
     })
     return total;
+  }
+
+  comprarPedido(): void{
+
   }
 
 }

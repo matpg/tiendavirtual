@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 //Busqueda
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { PedidoComponent } from './general/pedido/pedido.component';
 
 @NgModule({
     declarations: [
@@ -34,7 +35,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
         RegistroComponent,
         HomeComponent,
         Pagina404Component,
-        PruebasComponent
+        PruebasComponent,
+        PedidoComponent
     ],
     imports: [
         BrowserModule,
